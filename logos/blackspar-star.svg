@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-108 -108 216 216" role="img" aria-label="Blackspar North Star mark">
+  <defs>
+    <linearGradient id="goldLight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F0D6A0"/>
+      <stop offset="0.55" stop-color="#D8B36A"/>
+      <stop offset="1" stop-color="#B08A45"/>
+    </linearGradient>
+    <linearGradient id="goldShadow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D8B36A"/>
+      <stop offset="0.6" stop-color="#A87F3D"/>
+      <stop offset="1" stop-color="#8A632D"/>
+    </linearGradient>
+  </defs>
+  <!-- Left face: catches the light -->
+  <path d="M 0,-100 Q -5.5,-13 -38,0 Q -5.5,13 0,100 Z" fill="url(#goldLight)"/>
+  <!-- Right face: falls to shadow -->
+  <path d="M 0,-100 Q 5.5,-13 38,0 Q 5.5,13 0,100 Z" fill="url(#goldShadow)"/>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 470" role="img" aria-label="Blackspar logo, one-color ivory">
+  <g transform="translate(320,170) scale(1.35)">
+    <path d="M 0,-100 Q -5.5,-13 -38,0 Q -5.5,13 0,100 Q 5.5,13 38,0 Q 5.5,-13 0,-100 Z" fill="#F4F1E9"/>
+  </g>
+  <text x="329" y="418" text-anchor="middle"
+        font-family="Manrope, 'Avenir Next', 'Helvetica Neue', Arial, sans-serif"
+        font-size="46" font-weight="300" letter-spacing="0.36em"
+        fill="#F4F1E9">BLACKSPAR</text>
+</svg>
