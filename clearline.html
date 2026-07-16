@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Clear Line — Executive Pattern Recognition | BLACKSPAR</title>
+<meta name="description" content="Clear Line is the weekly executive brief from BLACKSPAR. Everyone else tells you what launched. Clear Line tells you the pattern forming across all of it — and the one move to make before it's obvious."/>
+<link rel="canonical" href="https://blackspar.co/clearline.html"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Clear Line — Executive Pattern Recognition"/>
+<meta property="og:description" content="Everyone else reports what happened. Clear Line shows you the pattern forming across it — one executive move, every Tuesday. From BLACKSPAR."/>
+<meta property="og:url" content="https://blackspar.co/clearline.html"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --blackout:     #070707;
+  --deep-surface: #1E1E1E;
+  --red:          #D32219;
+  --bone:         #F4F1E9;
+  --gray:         #888780;
+  --rule:         rgba(245,244,240,.08);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body { font-family: 'Inter', system-ui, sans-serif; background: var(--blackout); color: var(--bone); -webkit-font-smoothing: antialiased; overflow-x: hidden; line-height: 1.7; }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; height: 60px; display: flex; align-items: center; justify-content: space-between; padding: 0 48px; background: rgba(10,10,10,.95); backdrop-filter: blur(16px); border-bottom: 1px solid var(--rule); }
+.nav-logo { display: flex; flex-direction: column; gap: 1px; text-decoration: none; line-height: 1; }
+.nav-logo-word { font-size: 13px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--bone); }
+
+.nav-links { display: flex; align-items: center; gap: 36px; position: absolute; left: 50%; transform: translateX(-50%); }
+.nav-links a { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--gray); text-decoration: none; transition: color .2s; }
+.nav-links a:hover { color: var(--bone); }
+.nav-links a.active { color: var(--bone); }
+.nav-cta { font-size: 11px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--bone); border: 1px solid var(--red); padding: 9px 20px; text-decoration: none; transition: background .2s, color .2s; white-space: nowrap; }
+.nav-cta:hover { background: var(--red); }
+.sec-label { font-size: 10px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--red); margin-bottom: 24px; display: flex; align-items: center; gap: 12px; }
+.sec-label::before { content: ''; width: 24px; height: 1px; background: var(--red); }
+h2 { font-size: clamp(26px, 3.5vw, 44px); font-weight: 500; letter-spacing: -.8px; line-height: 1.12; color: var(--bone); }
+.btn-primary { display: inline-flex; align-items: center; gap: 10px; background: var(--red); color: #fff; font-size: 11px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; padding: 15px 30px; border: none; cursor: pointer; text-decoration: none; transition: background .2s; }
+.btn-primary:hover { background: #aa1800; }
+.btn-primary svg { transition: transform .2s; }
+.btn-primary:hover svg { transform: translateX(4px); }
+.btn-ghost { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--gray); text-decoration: none; border-bottom: 1px solid rgba(136,135,128,.3); padding-bottom: 2px; transition: color .2s, border-color .2s; }
+.btn-ghost:hover { color: var(--bone); border-color: var(--gray); }
+.cl-hero { min-height: 94vh; display: flex; flex-direction: column; justify-content: center; padding: 140px 48px 100px; position: relative; border-bottom: 1px solid var(--rule); }
+.cl-hero-inner { max-width: 940px; }
+.cl-eyebrow { font-size: 10px; letter-spacing: .22em; text-transform: uppercase; color: var(--gray); margin-bottom: 36px; display: flex; align-items: center; gap: 14px; }
+.cl-eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--red); }
+.cl-h1 { font-size: clamp(34px, 5.2vw, 68px); font-weight: 500; letter-spacing: -1.8px; line-height: 1.06; color: #fff; margin-bottom: 34px; max-width: 15ch; }
+.cl-h1 em { color: var(--red); font-style: normal; }
+.cl-sub { font-size: clamp(16px, 1.6vw, 19px); font-weight: 300; color: var(--gray); line-height: 1.68; max-width: 600px; margin-bottom: 48px; }
+.cl-sub strong { color: var(--bone); font-weight: 400; }
+.cl-hero-ctas { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+.cl-hero-meta { position: absolute; bottom: 44px; left: 48px; right: 48px; display: flex; gap: 48px; flex-wrap: wrap; border-top: 1px solid var(--rule); padding-top: 22px; }
+.cl-hero-meta-item { display: flex; flex-direction: column; gap: 4px; }
+.cl-hero-meta-label { font-size: 9px; letter-spacing: .16em; text-transform: uppercase; color: rgba(136,135,128,.6); }
+.cl-hero-meta-val { font-size: 13px; font-weight: 500; color: var(--bone); }
+.cl-position { padding: 120px 48px; background: var(--blackout); }
+.cl-position-inner { max-width: 820px; }
+.cl-position h2 { margin-bottom: 40px; }
+.cl-position h2 em { color: var(--red); font-style: normal; }
+.cl-versus { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin: 40px 0; border: 1px solid var(--rule); }
+.cl-versus-col { padding: 36px 32px; }
+.cl-versus-col.them { background: var(--blackout); }
+.cl-versus-col.us { background: var(--deep-surface); border-left: 2px solid var(--red); }
+.cl-versus-tag { font-size: 10px; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 20px; }
+.cl-versus-col.them .cl-versus-tag { color: var(--gray); }
+.cl-versus-col.us .cl-versus-tag { color: var(--red); }
+.cl-versus-line { font-size: 15px; font-weight: 300; line-height: 1.5; padding: 12px 0; border-bottom: 1px solid var(--rule); }
+.cl-versus-line:last-child { border-bottom: none; }
+.cl-versus-col.them .cl-versus-line { color: var(--gray); }
+.cl-versus-col.us .cl-versus-line { color: var(--bone); }
+.cl-position-close { font-size: 18px; font-weight: 300; color: var(--bone); line-height: 1.6; margin-top: 40px; }
+.cl-position-close strong { color: #fff; font-weight: 500; }
+.cl-linedevice { padding: 130px 48px; background: var(--bone); }
+.cl-linedevice-inner { max-width: 640px; margin: 0 auto; text-align: center; }
+.cl-linedevice .sec-label { color: var(--red); justify-content: center; }
+.cl-linedevice .sec-label::before { background: var(--red); }
+.cl-ld-above, .cl-ld-below { font-size: 14px; font-weight: 300; line-height: 1.9; }
+.cl-ld-above { color: #a3a29d; }
+.cl-ld-above span { display: block; }
+.cl-ld-line { display: flex; align-items: center; gap: 20px; margin: 28px 0; }
+.cl-ld-line .bar { flex: 1; height: 2px; background: var(--red); }
+.cl-ld-line .label { font-size: 12px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--red); white-space: nowrap; }
+.cl-ld-below { color: var(--blackout); font-weight: 400; }
+.cl-ld-below span { display: block; font-size: 20px; font-weight: 500; letter-spacing: -.3px; line-height: 1.4; }
+.cl-ld-caption { font-size: 13px; font-weight: 300; color: #5a5955; margin-top: 40px; line-height: 1.7; }
+.cl-format { padding: 120px 48px; background: var(--blackout); }
+.cl-format h2 { color: var(--bone); margin-bottom: 16px; max-width: 640px; }
+.cl-format-sub { font-size: 15px; font-weight: 300; color: var(--gray); line-height: 1.7; max-width: 520px; margin-bottom: 64px; }
+.cl-os { max-width: 720px; }
+.cl-os-side.above { margin-bottom: 4px; }
+.cl-os-side.below { margin-top: 4px; }
+.cl-os-move { display: flex; gap: 22px; align-items: flex-start; padding: 22px 4px; border-bottom: 1px solid var(--rule); }
+.cl-os-side.above .cl-os-move { border-top: 1px solid var(--rule); }
+.cl-os-side.below .cl-os-move:last-child { border-bottom: none; }
+.cl-os-num { font-size: 11px; font-weight: 600; letter-spacing: .14em; color: var(--red); min-width: 22px; margin-top: 4px; }
+.cl-os-title { font-size: 17px; font-weight: 500; color: var(--bone); margin-bottom: 6px; letter-spacing: -.3px; }
+.cl-os-body { font-size: 14px; font-weight: 300; color: var(--gray); line-height: 1.6; }
+.cl-os-linebar { display: flex; align-items: center; gap: 20px; margin: 20px 0; }
+.cl-os-linebar .bar { flex: 1; height: 2px; background: var(--red); }
+.cl-os-linebar .label { font-size: 13px; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; color: var(--red); white-space: nowrap; }
+.cl-os-caption { font-size: 14px; font-weight: 300; color: var(--gray); line-height: 1.7; max-width: 640px; margin-top: 48px; }
+.cl-os-caption { border-left: 2px solid var(--red); padding-left: 20px; }
+.cl-sample { padding: 120px 48px; background: var(--bone); }
+.cl-sample-inner { max-width: 820px; margin: 0 auto; }
+.cl-sample .sec-label { color: var(--red); }
+.cl-sample .sec-label::before { background: var(--red); }
+.cl-sample h2 { color: var(--blackout); margin-bottom: 48px; }
+.cl-signal-card { background: var(--blackout); border-top: 2px solid var(--red); }
+.cl-signal-head { padding: 24px 40px; border-bottom: 1px solid var(--rule); display: flex; align-items: baseline; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.cl-signal-issue { font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: var(--red); font-weight: 500; }
+.cl-signal-date { font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--gray); }
+.cl-signal-body { padding: 40px; }
+.cl-signal-label { font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: var(--gray); margin-bottom: 16px; }
+.cl-signal-hook { font-size: clamp(21px, 2.5vw, 29px); font-weight: 500; color: #fff; line-height: 1.28; letter-spacing: -.5px; margin-bottom: 26px; }
+.cl-signal-text { font-size: 15px; font-weight: 300; color: var(--bone); line-height: 1.75; margin-bottom: 18px; }
+.cl-signal-text strong { color: #fff; font-weight: 500; }
+.cl-signal-divider { display: flex; align-items: center; gap: 16px; margin: 32px 0; }
+.cl-signal-divider .bar { flex: 1; height: 1px; background: var(--rule); }
+.cl-signal-divider .bar.hot { height: 2px; background: var(--red); }
+.cl-signal-divider .label { font-size: 10px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--red); white-space: nowrap; }
+.cl-signal-move { background: var(--deep-surface); border-left: 2px solid var(--red); padding: 22px 26px; margin-top: 8px; }
+.cl-signal-move-label { font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
+.cl-signal-move-text { font-size: 15px; font-weight: 400; color: var(--bone); line-height: 1.6; }
+.cl-signal-foot { padding: 24px 40px; border-top: 1px solid var(--rule); }
+.cl-signal-cta { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--red); text-decoration: none; border-bottom: 1px solid var(--red); padding-bottom: 2px; }
+.cl-track { padding: 120px 48px; background: var(--blackout); }
+.cl-track-inner { max-width: 760px; }
+.cl-track h2 { margin-bottom: 20px; }
+.cl-track-sub { font-size: 16px; font-weight: 300; color: var(--gray); line-height: 1.7; margin-bottom: 56px; max-width: 580px; }
+.cl-track-sub strong { color: var(--bone); font-weight: 500; }
+.cl-track-list { display: flex; flex-direction: column; }
+.cl-track-row { display: grid; grid-template-columns: 90px 1fr 110px; gap: 24px; align-items: center; padding: 22px 0; border-bottom: 1px solid var(--rule); }
+.cl-track-row:first-child { border-top: 1px solid var(--rule); }
+.cl-track-date { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--gray); font-weight: 500; }
+.cl-track-call { font-size: 15px; font-weight: 300; color: var(--bone); line-height: 1.5; }
+.cl-track-status { font-size: 10px; letter-spacing: .14em; text-transform: uppercase; text-align: right; font-weight: 600; }
+.cl-track-status.pending { color: var(--red); }
+.cl-track-note { font-size: 13px; font-weight: 300; color: rgba(136,135,128,.75); margin-top: 40px; line-height: 1.7; font-style: italic; }
+.cl-connect { padding: 100px 48px; background: var(--deep-surface); }
+.cl-connect-inner { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.cl-connect .sec-label { color: var(--red); }
+.cl-connect .sec-label::before { background: var(--red); }
+.cl-connect h2 { margin-bottom: 20px; }
+.cl-connect-body p { font-size: 15px; font-weight: 300; color: var(--gray); line-height: 1.72; margin-bottom: 20px; }
+.cl-connect-body p strong { color: var(--bone); font-weight: 500; }
+.cl-closer { padding: 130px 48px; background: var(--blackout); text-align: center; border-top: 1px solid var(--rule); }
+.cl-closer-line { font-size: clamp(24px, 3.4vw, 40px); font-weight: 500; color: #fff; letter-spacing: -.8px; line-height: 1.3; max-width: 760px; margin: 0 auto; }
+.cl-closer-line em { color: var(--red); font-style: normal; }
+.cl-join { padding: 130px 48px; background: var(--blackout); text-align: center; position: relative; border-top: 2px solid var(--red); }
+.cl-join-inner { max-width: 560px; margin: 0 auto; }
+.cl-join-eyebrow { font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--red); margin-bottom: 24px; }
+.cl-join h2 { font-size: clamp(28px, 3.6vw, 44px); color: #fff; letter-spacing: -1px; margin-bottom: 20px; }
+.cl-join-sub { font-size: 15px; font-weight: 300; color: var(--gray); line-height: 1.7; margin-bottom: 44px; }
+.cl-form { display: flex; flex-direction: column; gap: 2px; max-width: 480px; margin: 0 auto; }
+.cl-form-row { display: flex; gap: 2px; }
+.cl-input { flex: 1; background: var(--deep-surface); border: 1px solid var(--rule); color: var(--bone); font-family: 'Inter', sans-serif; font-size: 14px; padding: 15px 18px; outline: none; transition: border-color .2s; }
+.cl-input::placeholder { color: var(--gray); }
+.cl-input:focus { border-color: var(--red); }
+.cl-submit { background: var(--red); color: #fff; border: none; font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; padding: 15px 26px; cursor: pointer; white-space: nowrap; transition: background .2s; }
+.cl-submit:hover { background: #aa1800; }
+.cl-form-note { font-size: 12px; font-weight: 300; color: rgba(136,135,128,.7); margin-top: 18px; }
+.cl-form-status { font-size: 13px; color: var(--bone); margin-top: 16px; min-height: 18px; }
+footer { background: var(--deep-surface); padding: 40px 48px; border-top: 1px solid var(--rule); display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 24px; }
+.footer-logo { display: flex; flex-direction: column; gap: 2px; }
+.footer-logo-word { font-size: 12px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--bone); }
+
+.footer-links { display: flex; gap: 28px; }
+.footer-links a { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--gray); text-decoration: none; transition: color .2s; }
+.footer-links a:hover { color: var(--bone); }
+.footer-right { text-align: right; }
+.footer-copy { font-size: 11px; color: rgba(136,135,128,.5); }
+.footer-promise { font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: rgba(136,135,128,.35); margin-top: 4px; }
+@media (max-width: 960px) {
+  nav { padding: 0 24px; } .nav-links { display: none; }
+  .cl-hero, .cl-position, .cl-linedevice, .cl-format, .cl-sample, .cl-track, .cl-connect, .cl-closer, .cl-join { padding-left: 24px; padding-right: 24px; }
+  .cl-hero { padding-top: 120px; }
+  .cl-hero-meta { left: 24px; right: 24px; gap: 28px; }
+  .cl-versus { grid-template-columns: 1fr; }
+  .cl-os { max-width: 100%; }
+  .cl-connect-inner { grid-template-columns: 1fr; gap: 32px; }
+  .cl-signal-body, .cl-signal-head, .cl-signal-foot { padding-left: 24px; padding-right: 24px; }
+  .cl-track-row { grid-template-columns: 70px 1fr 60px; gap: 14px; }
+  footer { grid-template-columns: 1fr; gap: 20px; } .footer-right { text-align: left; }
+}
+@media (max-width: 600px) {
+  .cl-form-row { flex-direction: column; }
+  .cl-hero-meta { flex-direction: column; gap: 16px; }
+  .cl-track-row { grid-template-columns: 1fr; gap: 6px; } .cl-track-status { text-align: left; }
+}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html" aria-label="BLACKSPAR home">
+    <span class="nav-logo-word">BLACKSPAR</span>
+    
+  </a>
+  <div class="nav-links">
+    <a href="index.html#audit">Audit</a>
+    <a href="index.html#fit">Is This For You?</a>
+    <a href="index.html#process">Process</a>
+    <a href="clearline.html" class="active">Clear Line</a>
+    <a href="index.html#about">About</a>
+  </div>
+  <a href="#join" class="nav-cta">Get the Brief</a>
+</nav>
+<section class="cl-hero">
+  <div class="cl-hero-inner">
+    <p class="cl-eyebrow">Clear Line — Executive Pattern Recognition</p>
+    <h1 class="cl-h1">The companies that lose won't lose because AI moved too <em>fast.</em></h1>
+    <p class="cl-sub">They'll lose because they didn't see the shift while it was happening. <strong>Clear Line is the weekly brief that shows operators the pattern forming across the market — and the one move to make before it's obvious to everyone else.</strong></p>
+    <div class="cl-hero-ctas">
+      <a href="#join" class="btn-primary">
+        Get This Week's Executive Brief
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#sample" class="btn-ghost">See the latest issue →</a>
+    </div>
+  </div>
+  <div class="cl-hero-meta">
+    <div class="cl-hero-meta-item"><span class="cl-hero-meta-label">Format</span><span class="cl-hero-meta-val">One issue, every Tuesday</span></div>
+    <div class="cl-hero-meta-item"><span class="cl-hero-meta-label">Read time</span><span class="cl-hero-meta-val">5 minutes</span></div>
+    <div class="cl-hero-meta-item"><span class="cl-hero-meta-label">Price</span><span class="cl-hero-meta-val">Free</span></div>
+    <div class="cl-hero-meta-item"><span class="cl-hero-meta-label">From</span><span class="cl-hero-meta-val">BLACKSPAR</span></div>
+  </div>
+</section>
+<section class="cl-position">
+  <div class="cl-position-inner">
+    <p class="sec-label">The Difference</p>
+    <h2>Everyone else reports. Clear Line <em>interprets.</em></h2>
+    <div class="cl-versus">
+      <div class="cl-versus-col them">
+        <p class="cl-versus-tag">Every AI newsletter</p>
+        <p class="cl-versus-line">OpenAI launched something.</p>
+        <p class="cl-versus-line">Anthropic launched something.</p>
+        <p class="cl-versus-line">Google launched something.</p>
+        <p class="cl-versus-line">Here are ten tools to try.</p>
+      </div>
+      <div class="cl-versus-col us">
+        <p class="cl-versus-tag">Clear Line</p>
+        <p class="cl-versus-line">Here's the pattern forming across all three.</p>
+        <p class="cl-versus-line">Here's the constraint it's about to expose.</p>
+        <p class="cl-versus-line">Here's what it costs if you're late.</p>
+        <p class="cl-versus-line">Here's the one move to make this week.</p>
+      </div>
+    </div>
+    <p class="cl-position-close">That's not information. It's <strong>executive pattern recognition</strong> — the thing that's actually hard, and the thing almost nobody sells.</p>
+  </div>
+</section>
+<section class="cl-linedevice">
+  <div class="cl-linedevice-inner">
+    <p class="sec-label">Every Issue Draws One</p>
+    <div class="cl-ld-above">
+      <span>Vendor pitches. Launch announcements.</span>
+      <span>Funding rounds. LinkedIn takes. Dashboards.</span>
+      <span>Ten-tool roundups. The endless scroll.</span>
+    </div>
+    <div class="cl-ld-line">
+      <span class="bar"></span>
+      <span class="label">The Line</span>
+      <span class="bar"></span>
+    </div>
+    <div class="cl-ld-below">
+      <span>The one pattern that changes a decision.</span>
+    </div>
+    <p class="cl-ld-caption">Everything above the line is noise. Everything below it is what matters. Clear Line's only job is to draw it — every week, in the same place, so you always know which side you're reading.</p>
+  </div>
+</section>
+<section class="cl-format">
+  <p class="sec-label">The Operating System</p>
+  <h2>Every issue is built around one line.</h2>
+  <p class="cl-format-sub">Not a pile of links. A fixed structure, drawn the same way every week — so you always know which side of the line you're reading.</p>
+  <div class="cl-os">
+    <div class="cl-os-side above">
+      <div class="cl-os-move"><span class="cl-os-num">01</span><div><p class="cl-os-title">The Signal</p><p class="cl-os-body">The pattern operators need to see before it becomes obvious to everyone else.</p></div></div>
+    </div>
+    <div class="cl-os-linebar">
+      <span class="bar"></span>
+      <span class="label">The Line</span>
+      <span class="bar"></span>
+    </div>
+    <div class="cl-os-side below">
+      <div class="cl-os-move"><span class="cl-os-num">02</span><div><p class="cl-os-title">The Constraint</p><p class="cl-os-body">The real bottleneck hiding behind the noise, named plainly.</p></div></div>
+      <div class="cl-os-move"><span class="cl-os-num">03</span><div><p class="cl-os-title">The Cost</p><p class="cl-os-body">The money, time, capacity, or decision quality being lost while it goes unaddressed.</p></div></div>
+      <div class="cl-os-move"><span class="cl-os-num">04</span><div><p class="cl-os-title">The Executive Move</p><p class="cl-os-body">One action a leader should consider this week. Not ten. One.</p></div></div>
+    </div>
+  </div>
+  <p class="cl-os-caption">Above the line: the signal in the market. Below the line: what it means for your business, and the one move to make. The line is where noise becomes a decision — and it appears in every issue, in the same place.</p>
+</section>
+<section class="cl-sample" id="sample">
+  <div class="cl-sample-inner">
+    <p class="sec-label">Example Issue</p>
+    <h2>See how one issue reads.</h2>
+    <div class="cl-signal-card">
+      <div class="cl-signal-head">
+        <span class="cl-signal-issue">Issue 001</span>
+        <span class="cl-signal-date">The AI Discipline Gap</span>
+      </div>
+      <div class="cl-signal-body">
+        <p class="cl-signal-label">The Signal</p>
+        <p class="cl-signal-hook">AI isn't exposing a technology gap. It's exposing a business discipline gap.</p>
+        <p class="cl-signal-text">The companies struggling with AI adoption aren't behind because they lack tools. They're behind because their processes, data, ownership, and decision rules were already unclear. <strong>AI didn't create the constraint. It revealed it.</strong></p>
+        <p class="cl-signal-text">Two companies buy the identical software and get opposite results. One had clear ownership and clean inputs. The other had an expensive rumor of a process. The tool didn't decide the outcome — the discipline did.</p>
+        <div class="cl-signal-divider">
+          <span class="bar"></span>
+          <span class="label">The Line</span>
+          <span class="bar hot"></span>
+        </div>
+        <p class="cl-signal-text">Above the line: the debate over which model to buy. Below the line, where it actually matters: whether your business is disciplined enough for any of them to help. The market is loud about the first question and silent about the second.</p>
+        <div class="cl-signal-move">
+          <p class="cl-signal-move-label">The Executive Move</p>
+          <p class="cl-signal-move-text">Before approving any new AI tool this quarter, pick the process you'd point it at and ask one question: could a new hire run it from documentation alone? If not, the constraint is discipline, not tooling — fix that first.</p>
+        </div>
+      </div>
+      <div class="cl-signal-foot">
+        <a href="#join" class="cl-signal-cta">Get the full issue Tuesday &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="cl-track">
+  <div class="cl-track-inner">
+    <p class="sec-label">The Track Record</p>
+    <h2>We publish the call before it's obvious. Then we let it play out.</h2>
+    <p class="cl-track-sub">Anyone can explain a shift after it happens. Clear Line commits to the pattern in writing, dated, ahead of the crowd — and marks it honestly when it lands. <strong>This record starts with Issue 001. Watch it fill in.</strong></p>
+    <div class="cl-track-list">
+      <div class="cl-track-row">
+        <span class="cl-track-date">Issue 001</span>
+        <span class="cl-track-call">AI adoption failures are discipline failures, not tooling failures &mdash; expect "which AI?" to give way to "where's the ROI?"</span>
+        <span class="cl-track-status pending">Called &middot; Live</span>
+      </div>
+      <div class="cl-track-row">
+        <span class="cl-track-date">Issue 002</span>
+        <span class="cl-track-call">The next signal publishes Tuesday.</span>
+        <span class="cl-track-status pending">Upcoming</span>
+      </div>
+      <div class="cl-track-row">
+        <span class="cl-track-date">Issue 003</span>
+        <span class="cl-track-call">The next signal publishes Tuesday.</span>
+        <span class="cl-track-status pending">Upcoming</span>
+      </div>
+    </div>
+    <p class="cl-track-note">Early readers don't just get the brief &mdash; they get to watch the calls resolve in real time. That's a vantage point you only get by being here first.</p>
+  </div>
+</section>
+<section class="cl-connect">
+  <div class="cl-connect-inner">
+    <div>
+      <p class="sec-label">The Connection</p>
+      <h2>Powered by BLACKSPAR.</h2>
+    </div>
+    <div class="cl-connect-body">
+      <p>Clear Line is built from the same thinking behind BLACKSPAR: <strong>constraint intelligence, decision clarity, and operational reality.</strong></p>
+      <p>BLACKSPAR helps companies find the constraint inside their business. Clear Line helps operators see the constraints forming across the market.</p>
+      <p><a href="index.html" style="color:var(--red);text-decoration:none;font-weight:500;">Explore BLACKSPAR &rarr;</a></p>
+    </div>
+  </div>
+</section>
+<section class="cl-closer">
+  <p class="cl-closer-line">Every company eventually discovers the constraint.<br/>Our readers usually find it <em>first.</em></p>
+</section>
+<section class="cl-join" id="join">
+  <div class="cl-join-inner">
+    <p class="cl-join-eyebrow">Get the Brief</p>
+    <h2>Get the signal before it becomes obvious.</h2>
+    <p class="cl-join-sub">Every Tuesday, thousands of decisions get made on old assumptions. Yours won't be one of them. One issue, one move, five minutes.</p>
+    <div class="cl-form">
+      <input class="cl-input" type="text" id="cl-name" placeholder="First name" aria-label="First name"/>
+      <div class="cl-form-row">
+        <input class="cl-input" type="email" id="cl-email" placeholder="you@company.com" aria-label="Email address"/>
+        <button class="cl-submit" type="button" onclick="clJoin()">Get the Brief</button>
+      </div>
+    </div>
+    <p class="cl-form-status" id="cl-status"></p>
+    <p class="cl-form-note">One executive signal per week. No spam. No recycled AI noise. Unsubscribe anytime.</p>
+  </div>
+</section>
+<footer>
+  <div class="footer-logo"><span class="footer-logo-word">BLACKSPAR</span></div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="clearline.html">Clear Line</a>
+    <a href="faq.html">FAQ</a>
+    <a href="privacy.html">Privacy</a>
+  </div>
+  <div class="footer-right">
+    <p class="footer-copy">&copy; 2026 BLACKSPAR. All rights reserved.</p>
+    <p class="footer-promise">See the signal. Make the move.</p>
+  </div>
+</footer>
+<script>
+function clJoin() {
+  var email = document.getElementById('cl-email').value.trim();
+  var name = document.getElementById('cl-name').value.trim();
+  var status = document.getElementById('cl-status');
+  if (!email || email.indexOf('@') === -1) {
+    status.style.color = '#D32219';
+    status.textContent = 'Enter a valid email to get the brief.';
+    return;
+  }
+  status.style.color = '#F4F1E9';
+  status.textContent = name
+    ? "You're in, " + name + '. The next issue lands Tuesday.'
+    : "You're in. The next issue lands Tuesday.";
+  document.getElementById('cl-email').value = '';
+  document.getElementById('cl-name').value = '';
+}
+</script>
+</body>
+</html>
