@@ -1,0 +1,82 @@
+/* ============================================================
+   BLACKSPAR — DESIGN TOKENS v1
+   Single source of truth. Every page, template, and asset
+   inherits from this file. Do not hard-code brand values.
+   ============================================================ */
+
+:root {
+  /* ---- Color: surfaces ---- */
+  --blackout:      #050505;   /* primary background */
+  --deep-surface:  #0D0D0D;   /* cards, section differentiation */
+  --carbon:        #161616;   /* elevated / interactive panels */
+
+  /* ---- Color: light ---- */
+  --bone:          #F4F1E9;   /* primary light text, light sections */
+  --ivory:         #E9E4D9;   /* secondary text, quiet highlights */
+  --field-gray:    #8C8982;   /* metadata, labels, dividers */
+
+  /* ---- Color: metallic ---- */
+  --gold:          #D8B36A;   /* Blackspar Gold, primary metallic */
+  --gold-hi:       #F0D6A0;   /* highlight */
+  --gold-lo:       #8A632D;   /* shadow tone */
+
+  /* ---- Color: signal ---- */
+  --red:           #D32219;   /* The Line, critical emphasis only */
+  --red-glow:      #FF3B30;   /* terminal point, focus states */
+
+  /* ---- Typography ---- */
+  --font-display:  'Manrope', 'Avenir Next', 'Helvetica Neue', Arial, sans-serif;
+  --font-serif:    'Cormorant Garamond', Georgia, serif;   /* sparing editorial accent */
+  --font-body:     'Manrope', 'Inter', -apple-system, sans-serif;
+
+  --track-wordmark: 0.36em;   /* BLACKSPAR wordmark: 0.30–0.42em */
+  --track-label:    0.18em;   /* section labels: 0.14–0.22em */
+
+  --weight-thin:    200;
+  --weight-light:   300;
+  --weight-regular: 400;
+  --weight-medium:  500;      /* maximum weight in the system */
+
+  /* ---- Type scale ---- */
+  --text-xs:   11px;
+  --text-sm:   13px;
+  --text-base: 16px;
+  --text-lg:   19px;
+  --text-xl:   24px;
+  --text-2xl:  32px;
+  --text-3xl:  44px;
+  --text-hero: clamp(34px, 5.4vw, 64px);
+
+  /* ---- Spacing ---- */
+  --space-1:  8px;
+  --space-2:  16px;
+  --space-3:  24px;
+  --space-4:  40px;
+  --space-5:  64px;
+  --space-6:  96px;
+  --space-7:  144px;
+
+  /* ---- Borders ---- */
+  --border-fine:   1px solid rgba(244, 241, 233, 0.10);
+  --border-quiet:  1px solid rgba(244, 241, 233, 0.06);
+  --border-gold:   1px solid rgba(216, 179, 106, 0.35);
+  --radius:        2px;        /* minimal radius, everywhere */
+
+  /* ---- Motion ---- */
+  --ease-brand:    cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-slow:      1.2s;
+  --dur-base:      0.6s;
+  --dur-fast:      0.25s;
+
+  /* ---- Layout ---- */
+  --max-width:     1160px;
+  --max-prose:     640px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-slow: 0.01s;
+    --dur-base: 0.01s;
+    --dur-fast: 0.01s;
+  }
+}
